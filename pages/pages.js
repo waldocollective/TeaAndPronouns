@@ -1,10 +1,10 @@
 'use strict';
 
 import WhoAreYou from './WhoAreYou/WhoAreYou.js';
-import NameEntry from './NameEntry/NameEntry.js';
+import YourNameEntry from './YourNameEntry/YourNameEntry.js';
 
 module.exports = {
   WhoAreYou: WhoAreYou,
-  NameEntry: NameEntry
+  YourNameEntry: YourNameEntry
 };
 

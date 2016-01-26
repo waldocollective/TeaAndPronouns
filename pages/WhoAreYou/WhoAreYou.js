@@ -28,7 +28,7 @@ export default class WhoAreYou extends Component {
     const { navigator } = this.props;
 
     navigator.replace({
-      id: 'NameEntry'
+      id: 'YourNameEntry'
     });
   }
 }
