@@ -7,6 +7,6 @@ The app is written using react-native which can be set up on your computer by fo
 # Contributors
 Wireframes and design by [HJFantaskis](https://github.com/HJFantaskis)
 
-Code by [robbie-c](https://github.com/robbie-c) - [website](robbiecoomber.co.uk)
+Code by [robbie-c](https://github.com/robbie-c) - [website](http://robbiecoomber.co.uk)
 
 We are both available for contract work, please get in touch!
