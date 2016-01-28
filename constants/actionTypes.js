@@ -1,7 +1,7 @@
 /* Initial data loaded from storage */
 export const INIT = 'INIT';
 
-export const UPDATE_USER_NAME = 'UPDATE_USER_NAME';
-export const UPDATE_USER_PRONOUN = 'UPDATE_USER_PRONOUN';
-export const UPDATE_USER_TEA = 'UPDATE_USER_TEA';
-export const UPDATE_USER_DIETARY = 'UPDATE_USER_DIETARY';
+export const UPDATE_SELF_NAME = 'UPDATE_SELF_NAME';
+export const UPDATE_SELF_PRONOUN = 'UPDATE_SELF_PRONOUN';
+export const UPDATE_SELF_TEA = 'UPDATE_SELF_TEA';
+export const UPDATE_SELF_DIETARY = 'UPDATE_SELF_DIETARY';

@@ -7,6 +7,7 @@ import React, {
   View,
   Navigator
 } from 'react-native';
+import { Provider } from 'react-redux';
 
 import {
   Splash,
@@ -31,18 +32,24 @@ class TeaAndPronouns extends Component {
   }
 
   render() {
-    return (
-      <Navigator
-        initialRoute={{id: 'WhoAreYou', name: 'WhoAreYou'}}
-        renderScene={this.renderScene.bind(this)}
-        configureScene={(route) => {
-          if (route.sceneConfig) {
-            return route.sceneConfig;
-          }
-          return Navigator.SceneConfigs.VerticalDownSwipeJump;
-        }
-      }/>
-    );
+    if (!this.state.hasStore) {
+      return <Splash/>
+    } else {
+      return (
+        <Provider store={this.store}>
+          <Navigator
+            initialRoute={{id: 'WhoAreYou', name: 'WhoAreYou'}}
+            renderScene={this.renderScene.bind(this)}
+            configureScene={(route) => {
+              if (route.sceneConfig) {
+                return route.sceneConfig;
+              }
+              return Navigator.SceneConfigs.VerticalDownSwipeJump;
+            }}
+          />
+        </Provider>
+      );
+    }
   }
 
   renderScene(route, navigator) {
@@ -50,14 +57,11 @@ class TeaAndPronouns extends Component {
       var routeId = route.id;
 
       const props = {
-        store: this.store,
         navigator: navigator
       };
 
       if (routeId === 'WhoAreYou') {
-        return (
-          <WhoAreYou {...props}/>
-        );
+        return <WhoAreYou {...props}/>;
       } else if (routeId === 'YourNameEntry') {
         return <YourNameEntry {...props}/>
       }

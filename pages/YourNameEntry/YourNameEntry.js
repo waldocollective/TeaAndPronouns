@@ -6,13 +6,14 @@ import React, {
   Text,
   TextInput
 } from 'react-native';
+import { connect } from 'react-redux';
 
 const Button = require('react-native-button');
 
 import styles from '../../styles/styles.js'
-import { UPDATE_USER_NAME } from '../../constants/actionTypes'
+import { updateSelfName } from '../../actionCreators/people'
 
-export default class YourNameEntry extends Component {
+class RawYourNameEntry extends Component {
 
   constructor() {
     super();
@@ -33,19 +34,19 @@ export default class YourNameEntry extends Component {
           multiline={false}
           value={this.state.text}
           onChangeText={(text) => this.setState({text})}
-          onSubmitEditing={this.onInputSubmitEditing.bind(this)}
+          onSubmitEditing={this.onSubmitEditing.bind(this)}
         />
       </View>
-    )
+    );
   }
 
-  onInputSubmitEditing() {
-    // TODO load next page
-
-    this.props.store.dispatch({
-      type: UPDATE_USER_NAME,
-      data: this.state.text
-    })
+  onSubmitEditing() {
+    const { dispatch } = this.props;
+    dispatch(updateSelfName(this.state.text));
   }
+
 }
 
+const YourNameEntry = connect()(RawYourNameEntry);
+
+export default YourNameEntry;

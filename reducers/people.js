@@ -1,4 +1,4 @@
-import { UPDATE_USER_NAME } from '../constants/actionTypes';
+import { UPDATE_SELF_NAME } from '../constants/actionTypes';
 
 const initialState = {
   self: {
@@ -13,7 +13,9 @@ const initialState = {
 export default function people(state = initialState, action) {
 
   switch (action.type) {
-    case UPDATE_USER_NAME:
+
+    case UPDATE_SELF_NAME:
+      console.log('update self name', action.data);
       return {
         ...state,
         self: {
