@@ -9,11 +9,27 @@ import React, {
 } from 'react-native';
 
 import {
+  Splash,
   WhoAreYou,
   YourNameEntry
 } from './pages/pages'
 
+import { createDataStore } from './dataStore/dataStore';
+
 class TeaAndPronouns extends Component {
+
+  constructor() {
+    super();
+    this.store = null;
+    this.state = {hasStore: false};
+
+    createDataStore()
+      .then((store) => {
+        this.store = store;
+        this.setState({hasStore: true});
+      });
+  }
+
   render() {
     return (
       <Navigator
@@ -30,15 +46,23 @@ class TeaAndPronouns extends Component {
   }
 
   renderScene(route, navigator) {
-    var routeId = route.id;
-    if (routeId === 'WhoAreYou') {
-      return (
-        <WhoAreYou
-          navigator={navigator}/>
-      );
-    } else if (routeId === 'YourNameEntry') {
-      return <YourNameEntry
-        navigator={navigator}/>
+    if (this.state.hasStore) {
+      var routeId = route.id;
+
+      const props = {
+        store: this.store,
+        navigator: navigator
+      };
+
+      if (routeId === 'WhoAreYou') {
+        return (
+          <WhoAreYou {...props}/>
+        );
+      } else if (routeId === 'YourNameEntry') {
+        return <YourNameEntry {...props}/>
+      }
+    } else {
+      return <Splash/>;
     }
   }
 }

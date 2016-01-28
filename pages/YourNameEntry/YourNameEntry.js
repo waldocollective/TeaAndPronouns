@@ -10,15 +10,16 @@ import React, {
 const Button = require('react-native-button');
 
 import styles from '../../styles/styles.js'
+import { UPDATE_USER_NAME } from '../../constants/actionTypes'
 
 export default class YourNameEntry extends Component {
 
   constructor() {
     super();
+
     this.state = {
-      text: ''
+      text: ""
     };
-    console.log('create your name entry');
   }
 
   render() {
@@ -40,6 +41,11 @@ export default class YourNameEntry extends Component {
 
   onInputSubmitEditing() {
     // TODO load next page
-    // TODO permanently store new name for the user
+
+    this.props.store.dispatch({
+      type: UPDATE_USER_NAME,
+      data: this.state.text
+    })
   }
 }
+
