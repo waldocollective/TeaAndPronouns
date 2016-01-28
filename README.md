@@ -5,8 +5,8 @@ This is an app based upon a chart found in the kitchen of a warehouse in West Lo
 The app is written using react-native which can be set up on your computer by following the steps at https://facebook.github.io/react-native/docs/getting-started.html
 
 # Contributors
-Wireframes and design by @HJFantaskis
+Wireframes and design by [HJFantaskis](https://github.com/HJFantaskis)
 
-Code by @robbie-c
+Code by [robbie-c](https://github.com/robbie-c) - [website](robbiecoomber.co.uk)
 
 We are both available for contract work, please get in touch!
