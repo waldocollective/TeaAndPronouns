@@ -1,3 +1,5 @@
+'use strict';
+
 const key = 'USER_DATA';
 
 import { createStore } from 'redux';

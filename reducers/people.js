@@ -1,3 +1,5 @@
+'use strict';
+
 import { UPDATE_SELF_NAME } from '../constants/actionTypes';
 
 const initialState = {

@@ -8,7 +8,7 @@ import React, {
 
 const Button = require('react-native-button');
 
-import styles from '../../styles/styles.js'
+import styles from '../../styles/styles'
 
 export default class WhoAreYou extends Component {
   render() {

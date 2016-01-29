@@ -1,8 +1,8 @@
 'use strict';
 
-import Splash from './Splash/Splash.js';
-import WhoAreYou from './WhoAreYou/WhoAreYou.js';
-import YourNameEntry from './YourNameEntry/YourNameEntry.js';
+import Splash from './Splash/Splash';
+import WhoAreYou from './WhoAreYou/WhoAreYou';
+import YourNameEntry from './YourNameEntry/YourNameEntry';
 
 module.exports = {
   Splash: Splash,

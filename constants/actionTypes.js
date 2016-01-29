@@ -1,3 +1,5 @@
+'use strict';
+
 /* Initial data loaded from storage */
 export const INIT = 'INIT';
 

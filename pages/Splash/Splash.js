@@ -6,8 +6,7 @@ import React, {
   Text
 } from 'react-native';
 
-
-import styles from '../../styles/styles.js'
+import styles from '../../styles/styles'
 
 export default class Splash extends Component {
   render() {

@@ -8,10 +8,8 @@ import React, {
 } from 'react-native';
 import { connect } from 'react-redux';
 
-const Button = require('react-native-button');
-
-import styles from '../../styles/styles.js'
-import { updateSelfName } from '../../actionCreators/people'
+import styles from '../../styles/styles';
+import { updateSelfName } from '../../actionCreators/people';
 
 class RawYourNameEntry extends Component {
 

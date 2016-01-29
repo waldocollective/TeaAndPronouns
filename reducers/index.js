@@ -1,3 +1,5 @@
+'use strict';
+
 import {combineReducers} from 'redux';
 
 import { INIT } from '../constants/actionTypes'
