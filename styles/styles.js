@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10
+  },
+  textInput: {
+    fontSize: 15,
+    height: 30
   }
 });
 

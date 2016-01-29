@@ -29,7 +29,7 @@ class RawYourNameEntry extends Component {
           What would you like us to call you?
         </Text>
         <TextInput
-          ref="input"
+          style={styles.textInput}
           autoFocus={true}
           multiline={false}
           value={this.state.text}
@@ -43,10 +43,6 @@ class RawYourNameEntry extends Component {
   onSubmitEditing() {
     const { dispatch } = this.props;
     dispatch(updateSelfName(this.state.text));
-  }
-
-  onComponentDidMount() {
-    console.log(this.refs.input);
   }
 
 }
