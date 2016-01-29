@@ -2,7 +2,7 @@
 
 import {combineReducers} from 'redux';
 
-import { INIT } from '../constants/actionTypes'
+import { INIT } from '../constants/actionTypes';
 
 import people from './people';
 
@@ -28,7 +28,7 @@ export default function rootReducer(state = initialState, action) {
     state = {
       initialized: true,
       ...action.data
-    }
+    };
   }
 
   return combinedSubReducers(state, action);

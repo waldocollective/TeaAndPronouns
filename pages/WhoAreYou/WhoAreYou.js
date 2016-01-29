@@ -1,6 +1,6 @@
 'use strict';
 
-import React, {
+import {
   Component,
   View,
   Text
@@ -8,7 +8,7 @@ import React, {
 
 const Button = require('react-native-button');
 
-import styles from '../../styles/styles'
+import styles from '../../styles/styles';
 
 export default class WhoAreYou extends Component {
   render() {
@@ -21,7 +21,7 @@ export default class WhoAreYou extends Component {
           Who are you?
         </Button>
       </View>
-    )
+    );
   }
 
   onButtonPress() {

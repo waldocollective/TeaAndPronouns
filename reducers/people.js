@@ -4,10 +4,10 @@ import { UPDATE_SELF_NAME } from '../constants/actionTypes';
 
 const initialState = {
   self: {
-    name: "",
-    pronouns: "",
-    tea: "",
-    food: ""
+    name: '',
+    pronouns: '',
+    tea: '',
+    food: ''
   },
   others: []
 };
@@ -24,7 +24,7 @@ export default function people(state = initialState, action) {
           ...state.self,
           name: action.data
         }
-      }
+      };
   }
 
   return state;

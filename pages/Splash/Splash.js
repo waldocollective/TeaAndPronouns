@@ -1,12 +1,12 @@
 'use strict';
 
-import React, {
+import {
   Component,
   View,
   Text
 } from 'react-native';
 
-import styles from '../../styles/styles'
+import styles from '../../styles/styles';
 
 export default class Splash extends Component {
   render() {
@@ -16,6 +16,6 @@ export default class Splash extends Component {
           Tea And Pronouns
         </Text>
       </View>
-    )
+    );
   }
 }

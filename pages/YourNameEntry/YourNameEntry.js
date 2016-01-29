@@ -1,6 +1,6 @@
 'use strict';
 
-import React, {
+import {
   Component,
   View,
   Text,
@@ -17,17 +17,19 @@ class RawYourNameEntry extends Component {
     super();
 
     this.state = {
-      text: ""
+      text: ''
     };
   }
 
   render() {
+
     return (
       <View style={styles.container}>
         <Text style={styles.h1}>
           What would you like us to call you?
         </Text>
         <TextInput
+          ref="input"
           autoFocus={true}
           multiline={false}
           value={this.state.text}
@@ -41,6 +43,10 @@ class RawYourNameEntry extends Component {
   onSubmitEditing() {
     const { dispatch } = this.props;
     dispatch(updateSelfName(this.state.text));
+  }
+
+  onComponentDidMount() {
+    console.log(this.refs.input);
   }
 
 }

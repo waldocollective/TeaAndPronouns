@@ -1,10 +1,7 @@
 'use strict';
 
-import React, {
+import {
   Component,
-  StyleSheet,
-  Text,
-  View,
   Navigator
 } from 'react-native';
 import { Provider } from 'react-redux';
@@ -13,7 +10,7 @@ import {
   Splash,
   WhoAreYou,
   YourNameEntry
-} from './pages/pages'
+} from './pages/pages';
 
 import { createDataStore } from './dataStore/dataStore';
 
@@ -33,7 +30,7 @@ export default class TeaAndPronouns extends Component {
 
   render() {
     if (!this.state.hasStore) {
-      return <Splash/>
+      return <Splash/>;
     } else {
       return (
         <Provider store={this.store}>
@@ -63,7 +60,7 @@ export default class TeaAndPronouns extends Component {
       if (routeId === 'WhoAreYou') {
         return <WhoAreYou {...props}/>;
       } else if (routeId === 'YourNameEntry') {
-        return <YourNameEntry {...props}/>
+        return <YourNameEntry {...props}/>;
       }
     } else {
       return <Splash/>;
